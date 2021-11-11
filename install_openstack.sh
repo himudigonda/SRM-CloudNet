@@ -19,6 +19,9 @@ echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
 #? install git
 sudo apt-get install git -y
 
+#? su to stack user
+su - stack
+
 #? git clone devstack repo
 git clone https://git.openstack.org/openstack-dev/devstack
 
@@ -54,8 +57,7 @@ echo "" >> $local_config
 firefox https://$ip_addr/dashboardip_addrip_addr
 
 # Extra Configs
-DEST=/opt/stackLOG_COLLOG_COLOR=False
-OR=False
-
-LOGFILE=$DEST/logs/stack.sh.log
-LOG_COLOR=False
+#DEST=/opt/stackLOG_COLLOG_COLOR=False
+#OR=False
+#LOGFILE=$DEST/logs/stack.sh.log
+#LOG_COLOR=False
