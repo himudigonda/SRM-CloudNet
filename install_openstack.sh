@@ -13,7 +13,7 @@ sudo apt-get full-upgrade -y
 init 6
 
 #? create stack user
-sudo adduser -s /bin/bash -d /opt/stack -m stack
+sudo useradd -s /bin/bash -d /opt/stack -m stack
 echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
 
 #? install git
